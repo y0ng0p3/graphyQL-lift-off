@@ -1,2 +1,2 @@
 # graphyQL-lift-off-server
-Server repository of Apollo Odyssey Lift Off program
+Server repo of Apollo Odyssey Lift Off program
