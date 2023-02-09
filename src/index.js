@@ -32,10 +32,11 @@ const server = new ApolloServer({
     }
   }
 });
-server.listen({ port: process.env.PORT || 4000 }).then(() => {
+const port = process.env.PORT || 4000
+server.listen({ port: port }).then(() => {
   console.log(`
       🚀  Server is running!
-      🔉  Listening on port 4000
-      📭  Query at http://localhost:4000
+      🔉  Listening on port ${port}
+      📭  Query at http://localhost:${port}
     `);
 });
