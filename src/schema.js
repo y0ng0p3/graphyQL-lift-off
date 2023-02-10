@@ -6,6 +6,8 @@ const typeDefs = gql`
 		tracksForHome: [Track!]!
 		"Fetch a specific track, provided a track's ID"
 		track(id: ID!): Track
+		"Fetch a specific module, provided a module's ID"
+		module(id: ID!): Module
 	}
 	
 	type Mutation {
@@ -68,9 +70,9 @@ const typeDefs = gql`
 		length: Int @deprecated(reason: "Use durationInSeconds")
 		"The module's video duration, in seconds"
 		durationInSeconds: Int
-		"Module's text content"
+		"The module's text-based description, can be in markdown format. In case of a video, it will be the enriched transcript"
 		content: String
-		"Module's video"
+		"The module's video url, for video-based modules"
 		videoUrl: String
 	}
 `;
